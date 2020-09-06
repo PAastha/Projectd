@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        
+        <div class="container">
+        <h1><center><%=title %></center></h1>
+        
+        <form action="/save" method="post">
+           
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" placeholder="Enter name"  id="name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="Author">Author</label>
+                <input  type="text" class="form-control" placeholder="Enter author" id="author" name="author">
+              
+            </div>
+            <div class="form-group">
+                <label for="Publication">Publication:</label>
+                  <input  type="text" class="form-control" placeholder="Enter publication"  id="publication" name="publication">
+                </label>
+              </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
+        </div>
+        </body>
+        </html>

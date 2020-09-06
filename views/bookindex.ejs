@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        
+        <div class="container">
+        <h1><center><%=title %></center></h1>
+        <a href="/add" class="btn btn-small btn-success">ADD BOOK</a><br/>
+        <table class="table table-light  table-striped">
+        <thead>
+            <tr>
+                
+                <th>Name</th>
+                <th>Authtor</th>
+                <th>Publication</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+          <% users.forEach(function(user){ %>  
+          <tr>
+              
+              <td><%= user.name%></td>
+              <td><%= user.Author%></td>
+              <td><%= user.Publication%></td>
+               <td>
+                   <a href="/edit/<%= user.id %>" class="btn btn-sm btn-primary">Edit</a>
+                   <a href="/delete/<%= user.id %>" class= "btn btn-sm btn-danger">Delete</a>
+                </td>
+           </tr>
+           <% }); %>
+        
+        
+        </tbody>
+</table>
+        </div>
+        
+    </body>
+</html>
